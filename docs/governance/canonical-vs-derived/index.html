@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Canonical versus Derived Outputs Doctrine — AVOL Governance</title>
-  <meta name="description" content="Canonical vs. Derived Outputs Doctrine (HTML canonical; PDF reference artifact)." />
+  <title>Canonical vs. Derived Outputs Doctrine — AVOL Governance</title>
+  <meta name="description" content="AVOL™ Canonical vs. Derived Outputs Doctrine v1.0. Canonical HTML; PDFs are reference artifacts." />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
@@ -19,34 +19,186 @@
 
   <main class="container">
     <section class="doc-header">
-      <h1>Canonical vs. Derived Outputs Doctrine</h1>
+      <h1>AVOL™ — Canonical vs. Derived Outputs Doctrine</h1>
 
-      <div class="notice">
-        <div><strong>Status:</strong> Normative</div>
-        <div><strong>Version:</strong> v1.0</div>
-        <div><strong>Canonical:</strong> This HTML page is the authoritative form of this document.</div>
+      <div class="notice" role="note" aria-label="Canonical notice">
+        <div><strong>Status:</strong> Normative · Binding</div>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><strong>Effective date:</strong> 09-January-2026</div>
+        <div><strong>Canonical:</strong> This HTML page is the authoritative form of this doctrine.</div>
         <div><strong>PDF:</strong> <a href="/governance/canonical-vs-derived/pdf/">Reference artifacts</a></div>
+        <div><strong>Governance stack:</strong> <a href="/governance/">/governance/</a></div>
       </div>
 
       <p class="muted">
-        Placeholder page. Canonical HTML content will be added here.
+        This doctrine defines the non-negotiable semantic boundary between canonical AVOL outputs
+        and all derived outputs generated downstream of AVOL.
       </p>
     </section>
 
     <section class="card">
-      <h2>In this document</h2>
-      <p class="muted">A table of contents will appear once the document is published as HTML.</p>
+      <h2>Contents</h2>
+      <ol class="stack">
+        <li><a href="#purpose-and-authority">1. Purpose and authority</a></li>
+        <li><a href="#canonical-outputs">2. Canonical AVOL outputs</a></li>
+        <li><a href="#derived-outputs">3. Derived outputs</a></li>
+        <li><a href="#boundary-enforcement">4. Boundary enforcement</a></li>
+        <li><a href="#non-attribution">5. Non-attribution doctrine</a></li>
+        <li><a href="#machine-ai">6. Machine and AI agent implications</a></li>
+        <li><a href="#final-assertion">7. Final assertion</a></li>
+      </ol>
+    </section>
+
+    <section class="card" id="purpose-and-authority">
+      <h2>1. Purpose and authority</h2>
+      <p>
+        This doctrine defines the non-negotiable semantic boundary between canonical AVOL™ outputs
+        and all derived outputs generated downstream of AVOL.
+      </p>
+      <p>
+        It is authoritative for legal, regulatory, machine, and governance interpretation and is
+        binding across all AVOL integrations, implementations, and disclosures.
+      </p>
+      <p>
+        This doctrine extends, and does not modify or reinterpret, the controlling AVOL documents,
+        including the Canonical Definition &amp; Scope Statement, Declared Evaluation Context,
+        AVOL™ Evaluation Contract, and AVOL™ Output Semantics Specification.
+      </p>
+    </section>
+
+    <section class="card" id="canonical-outputs">
+      <h2>2. Canonical AVOL outputs</h2>
+
+      <h3>2.1 Definition</h3>
+      <p>
+        A canonical AVOL output is the sole, authoritative representation produced by the AVOL
+        system for the value components within its defined scope.
+      </p>
+
+      <h3>2.2 Required semantic properties</h3>
+      <ul class="bullets">
+        <li><strong>Determinism:</strong> Identical inputs under the same declared ruleset version produce identical outputs.</li>
+        <li><strong>Context independence:</strong> Outputs are invariant to undeclared user identity, preferences, or inferred attributes.</li>
+        <li><strong>Structural neutrality:</strong> No incentives, commissions, rankings, or optimization intent are encoded.</li>
+        <li><strong>Inspectability:</strong> Outputs are decomposable into explicit arithmetic transformations.</li>
+        <li><strong>Scalar finality:</strong> The output is a single numeric value, complete and self-contained.</li>
+        <li><strong>Passive comparability:</strong> Outputs may be numerically compared without AVOL performing comparison or ordering.</li>
+      </ul>
+
+      <h3>2.3 Canonical output scope</h3>
+      <ul class="bullets">
+        <li>The normalized numeric value</li>
+        <li>The declared ruleset or version identifier</li>
+        <li>The explicit unit of expression</li>
+      </ul>
+
+      <h3>2.4 Explicit non-meanings</h3>
+      <ul class="bullets">
+        <li>Best value</li>
+        <li>Cheapest option</li>
+        <li>Recommended or optimal choice</li>
+        <li>Expected outcome or predicted behavior</li>
+      </ul>
+      <p>Canonical outputs represent value content, not decision guidance.</p>
+    </section>
+
+    <section class="card" id="derived-outputs">
+      <h2>3. Derived outputs</h2>
+
+      <p>
+        A derived output is any representation, transformation, or interpretation that consumes
+        a canonical AVOL output and applies intent, preference, objectives, or contextual logic
+        beyond representation.
+      </p>
+
+      <h3>3.1 Categories of derivation (non-exhaustive)</h3>
+      <ul class="bullets">
+        <li>Comparative derivation (ranking, sorting, selection)</li>
+        <li>Interpretive derivation (labeling, recommendations)</li>
+        <li>Objective-based derivation (optimization, weighting)</li>
+        <li>Contextual derivation (personalization)</li>
+        <li>Predictive or behavioral derivation</li>
+      </ul>
+
+      <p>Derived outputs are expected and permitted, but they are not AVOL outputs.</p>
+    </section>
+
+    <section class="card" id="boundary-enforcement">
+      <h2>4. Boundary enforcement</h2>
+
+      <p>
+        The canonical boundary terminates at the moment AVOL emits its numeric output.
+        No operation beyond that emission falls within AVOL.
+      </p>
+
+      <p>
+        Boundary crossing is permitted; attribution to AVOL is prohibited.
+      </p>
+    </section>
+
+    <section class="card" id="non-attribution">
+      <h2>5. Non-attribution doctrine</h2>
+
+      <p>AVOL is responsible only for:</p>
+      <ul class="bullets">
+        <li>Correct, deterministic computation of canonical outputs</li>
+        <li>Adherence to declared rulesets and constraints</li>
+      </ul>
+
+      <p>AVOL is not responsible for:</p>
+      <ul class="bullets">
+        <li>Interpretation of outputs</li>
+        <li>Decisions or outcomes</li>
+        <li>Recommendations or optimization</li>
+      </ul>
+
+      <p>
+        No downstream interpretation may redefine or retroactively attribute intent
+        or decisioning behavior to AVOL.
+      </p>
+    </section>
+
+    <section class="card" id="machine-ai">
+      <h2>6. Machine and AI agent implications</h2>
+
+      <p>
+        AI systems may consume canonical AVOL outputs as neutral numeric inputs.
+        Outputs become derived the moment ranking, recommendation, optimization,
+        or preference incorporation occurs.
+      </p>
+
+      <p>
+        AVOL does not recommend. AVOL cannot recommend. Recommendation exists only downstream.
+      </p>
+    </section>
+
+    <section class="card" id="final-assertion">
+      <h2>7. Final assertion</h2>
+
+      <ol class="stack">
+        <li>AVOL is a canonical value representation layer.</li>
+        <li>It ends at representation.</li>
+        <li>Everything beyond representation is derived.</li>
+        <li>Derived outputs are powerful, permitted, and external — but they are not AVOL.</li>
+      </ol>
+
+      <p>
+        No regulator, integrator, AI platform, or adversary may plausibly attribute
+        derived meaning, intent, or responsibility back to AVOL without violating this doctrine.
+      </p>
     </section>
 
     <nav class="doc-footer-nav" aria-label="Governance stack navigation">
-      <a class="button subtle" href="/governance/">Back to governance hub</a>
+      <a class="button subtle" href="/governance/output-semantics/">Previous: AVOL™ Output Semantics Specification</a>
+      <a class="button subtle" href="/governance/reliance-nonreliance/">Next: Reliance &amp; Non-Reliance Clause</a>
     </nav>
 
     <footer class="site-footer">
       <div class="muted">
-        Governance Set: v1.0 (HTML canonical; PDFs reference)
+        © 2026 AVOL. All rights reserved. · Governance Set: v1.0 (HTML canonical; PDFs reference)
       </div>
     </footer>
   </main>
 </body>
 </html>
+
