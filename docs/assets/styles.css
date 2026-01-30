@@ -75,3 +75,38 @@ ul{
   margin: 18px 0;
 }
 
+/* Layout */
+.container { max-width: 980px; margin: 0 auto; padding: 24px; }
+.site-header { border-bottom: 1px solid #e6e6e6; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.brand { text-decoration: none; font-weight: 700; letter-spacing: 0.2px; }
+.top-nav a { margin-left: 16px; text-decoration: none; }
+.top-nav a[aria-current="page"] { text-decoration: underline; }
+
+.hero { padding: 18px 0 6px; }
+.lede { font-size: 1.05rem; line-height: 1.6; }
+
+.card { border: 1px solid #e6e6e6; border-radius: 10px; padding: 18px; margin: 18px 0; }
+.muted { color: #555; }
+.small { font-size: 0.92rem; }
+
+.stack { padding-left: 18px; line-height: 1.8; }
+
+.bullets { padding-left: 18px; line-height: 1.8; }
+
+.actions { margin-top: 12px; }
+.button { display: inline-block; padding: 10px 12px; border: 1px solid #222; border-radius: 10px; text-decoration: none; }
+.button.subtle { border-color: #bbb; color: #222; }
+
+.notice { border-left: 4px solid #222; padding: 10px 12px; margin: 12px 0; background: #fafafa; }
+.doc-header { padding: 8px 0; }
+
+.gov-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.gov-table th, .gov-table td { border-bottom: 1px solid #e6e6e6; padding: 10px; text-align: left; vertical-align: top; }
+.gov-table th { font-weight: 600; }
+
+.doc-footer-nav { margin: 18px 0 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.site-footer { padding: 20px 0 8px; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
