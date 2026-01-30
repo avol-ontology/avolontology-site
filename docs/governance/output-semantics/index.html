@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AVOL Output Semantics — AVOL Governance</title>
-  <meta name="description" content="AVOL Output Semantics (HTML canonical; PDF reference artifact)." />
+  <title>AVOL™ Output Semantics Specification — AVOL Governance</title>
+  <meta name="description" content="AVOL™ Output Semantics Specification v1.0. Canonical HTML; PDFs are reference artifacts." />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
@@ -19,34 +19,330 @@
 
   <main class="container">
     <section class="doc-header">
-      <h1>AVOL Output Semantics</h1>
+      <h1>AVOL™ — Output Semantics Specification</h1>
 
-      <div class="notice">
+      <div class="notice" role="note" aria-label="Canonical notice">
         <div><strong>Status:</strong> Normative</div>
-        <div><strong>Version:</strong> v1.0</div>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><strong>Effective date:</strong> 09-January-2026</div>
+        <div><strong>Scope:</strong> Semantic definition of AVOL Evaluation Outputs</div>
+        <div><strong>Audience:</strong> Regulators, integrators, auditors, AI governance reviewers, legal analysts</div>
+        <div><strong>Applicability:</strong> All AVOL-conformant systems, including AVOL-Base and AVOL-Beta</div>
         <div><strong>Canonical:</strong> This HTML page is the authoritative form of this document.</div>
         <div><strong>PDF:</strong> <a href="/governance/output-semantics/pdf/">Reference artifacts</a></div>
+        <div><strong>Governance stack:</strong> <a href="/governance/">/governance/</a></div>
       </div>
 
       <p class="muted">
-        Placeholder page. Canonical HTML content will be added here.
+        This document defines the semantic meaning of an AVOL Evaluation Output and explicitly excludes non-canonical interpretations.
       </p>
     </section>
 
     <section class="card">
-      <h2>In this document</h2>
-      <p class="muted">A table of contents will appear once the document is published as HTML.</p>
+      <h2>Contents</h2>
+      <ol class="stack">
+        <li><a href="#semantic-nature">1. Semantic Nature of an AVOL Evaluation Output</a></li>
+        <li><a href="#intrinsic-properties">2. Intrinsic Semantic Properties</a></li>
+        <li><a href="#prohibited-interpretations">3. Non-Semantic and Prohibited Interpretations</a></li>
+        <li><a href="#comparability">4. Comparability Semantics</a></li>
+        <li><a href="#representation-labeling">5. Representation and Labeling Constraints</a></li>
+        <li><a href="#machine-agent-semantics">6. Machine and AI Agent Semantics</a></li>
+        <li><a href="#semantic-responsibility">7. Boundary of Semantic Responsibility</a></li>
+        <li><a href="#summary-constraints">8. Summary of Semantic Constraints (Normative)</a></li>
+      </ol>
+    </section>
+
+    <!-- 1 -->
+    <section class="card" id="semantic-nature">
+      <h2>1. Semantic Nature of an AVOL Evaluation Output</h2>
+
+      <h3 id="definition">1.1. Definition</h3>
+      <p>
+        An AVOL Evaluation Output is a deterministic, scalar representation of the quantifiable, non-price value components
+        associated with a single transactional option, expressed in a standardized monetary denomination under a declared evaluation context.
+      </p>
+      <p>
+        Canonical AVOL outputs represent normalized non-price value components only; base price is admissible for evaluation
+        completeness and downstream derivation but is not included in the canonical scalar unless explicitly specified by the governing ruleset.
+      </p>
+
+      <h3 id="what-output-represents">1.2. What the Output Represents</h3>
+      <p>An AVOL Evaluation Output represents:</p>
+      <ol class="stack">
+        <li>
+          <strong>The arithmetically aggregated monetary equivalents</strong> of explicitly defined, non-price value components that are:
+          <ul class="bullets">
+            <li>Knowable at the moment of evaluation, and</li>
+            <li>Converted using declared, inspectable conversion rules.</li>
+          </ul>
+          <p class="muted small">
+            “Knowable” means available through declared inputs and externally defined rules without inference, estimation, or probabilistic assumption.
+          </p>
+        </li>
+        <li><strong>A value representation</strong>, not a decision artifact or evaluative judgment.</li>
+        <li><strong>A context-bound measurement</strong> of an option’s translated value under a specific, declared ruleset.</li>
+      </ol>
+
+      <h3 id="semantic-commitments">1.3. Semantic Commitments</h3>
+      <p>An AVOL Evaluation Output commits only to the following:</p>
+      <ol class="stack">
+        <li>That the value components included were converted and aggregated according to the declared AVOL ruleset.</li>
+        <li>That identical inputs under the same ruleset yield identical outputs.</li>
+        <li>That the output is numerically comparable to other AVOL outputs generated under the same ruleset.</li>
+      </ol>
+
+      <h3 id="what-output-does-not-represent">1.4. What the Output Does Not Represent</h3>
+      <p>An AVOL Evaluation Output does not represent:</p>
+      <ol class="stack">
+        <li>A recommendation, endorsement, or suggestion.</li>
+        <li>A ranking or ordering of options.</li>
+        <li>A prediction of outcomes, behavior, satisfaction, or realized benefit.</li>
+        <li>A personalized valuation for any specific individual.</li>
+        <li>A probability, expectation, or likelihood of value realization.</li>
+        <li>An optimization target or objective function.</li>
+      </ol>
+    </section>
+
+    <!-- 2 -->
+    <section class="card" id="intrinsic-properties">
+      <h2>2. Intrinsic Semantic Properties</h2>
+
+      <h3 id="scalar-meaning">2.1. Scalar Meaning</h3>
+      <ol class="stack">
+        <li>The output is a single scalar numeric value.</li>
+        <li>It has no intrinsic directionality, preference, or optimization semantics.</li>
+      </ol>
+
+      <h3 id="normalization-semantics">2.2. Normalization Semantics</h3>
+      <ol class="stack">
+        <li>All included components are normalized into a common monetary unit using declared conversion constants.</li>
+        <li>Normalization is mechanical and arithmetic, not heuristic or adaptive, and does not incorporate judgment, preference, or outcome weighting.</li>
+        <li>No weighting, prioritization, or contextual adjustment is performed within AVOL.</li>
+        <li>
+          Conversion constants are declared, versioned parameters. They may be sourced from externally published valuations or defined methodologies,
+          as fixed and declared by the governing ruleset version. AVOL does not infer, personalize, adapt, or optimize conversion constants per user,
+          option, counterparty, or outcome.
+        </li>
+        <li>
+          The source or methodology for any conversion constant is fixed per ruleset version and <strong>SHALL NOT</strong> be selected, altered, or substituted
+          at evaluation time.
+        </li>
+      </ol>
+
+      <h3 id="context-binding">2.3. Context Binding</h3>
+      <p>Each output is semantically bound to:</p>
+      <ol class="stack">
+        <li>A specific transactional option.</li>
+        <li>A specific evaluation moment or parameter set.</li>
+        <li>A specific, versioned ruleset.</li>
+        <li>The output has no semantic meaning outside that declared context.</li>
+      </ol>
+
+      <h3 id="determinism">2.4. Determinism</h3>
+      <ol class="stack">
+        <li>The output is fully deterministic.</li>
+        <li>No randomness, learning, inference, or adaptive logic is permitted.</li>
+        <li>Determinism holds across users, systems, time, and presentation layers, given identical inputs and ruleset version.</li>
+      </ol>
+
+      <h3 id="inspectability">2.5. Inspectability</h3>
+      <p>
+        Inspectable means that all inputs, constants, and transformations are explicitly disclosed and mechanically decomposable;
+        it does not imply certification, validation, or independent audit.
+      </p>
+      <ol class="stack">
+        <li>Every output must be decomposable into explicit arithmetic operations.</li>
+        <li>All conversion constants and aggregation logic must be declarable and inspectable.</li>
+        <li>Black-box, probabilistic, or non-inspectable processes are prohibited within the AVOL boundary.</li>
+      </ol>
+    </section>
+
+    <!-- 3 -->
+    <section class="card" id="prohibited-interpretations">
+      <h2>3. Non-Semantic and Prohibited Interpretations</h2>
+
+      <h3 id="explicitly-excluded-meanings">3.1. Explicitly Excluded Meanings</h3>
+      <p>The following interpretations are explicitly excluded and invalid:</p>
+      <ol class="stack">
+        <li>“Higher output means a better choice.”</li>
+        <li>“Lower output means inferior value.”</li>
+        <li>“The output reflects user preferences or priorities.”</li>
+        <li>“The output accounts for likelihood of use, redemption, or satisfaction.”</li>
+        <li>“The output incorporates platform incentives, commissions, or margins.”</li>
+      </ol>
+
+      <h3 id="invalid-inferences">3.2. Invalid Inferences</h3>
+      <p>
+        Any inference that treats an AVOL Evaluation Output as:
+      </p>
+      <ol class="stack">
+        <li>A decision signal,</li>
+        <li>A recommendation signal,</li>
+        <li>A ranking input produced by AVOL,</li>
+        <li>An optimization result,</li>
+        <li>constitutes a semantic violation of AVOL’s defined meaning.</li>
+      </ol>
+    </section>
+
+    <!-- 4 -->
+    <section class="card" id="comparability">
+      <h2>4. Comparability Semantics</h2>
+
+      <h3 id="when-comparable">4.1. When Outputs Are Comparable</h3>
+      <p>Two or more AVOL Evaluation Outputs are comparable only if:</p>
+      <ol class="stack">
+        <li>They are generated under the same declared ruleset.</li>
+        <li>They use the same normalization logic and conversion constants.</li>
+        <li>They are expressed in the same monetary denomination.</li>
+      </ol>
+
+      <h3 id="meaning-of-comparability">4.2. Meaning of Comparability</h3>
+      <p>Comparability means only that:</p>
+      <ol class="stack">
+        <li>Numeric differences between outputs reflect only differences in the translated value components included.</li>
+        <li>Outputs can be arithmetically contrasted without further translation.</li>
+      </ol>
+
+      <h3 id="what-comparability-does-not-mean">4.3. What Comparability Does Not Mean</h3>
+      <p>Comparability does not imply:</p>
+      <ol class="stack">
+        <li>Preference.</li>
+        <li>Superiority or inferiority.</li>
+        <li>Selection guidance.</li>
+        <li>Ordering or ranking.</li>
+        <li>Decision readiness.</li>
+      </ol>
+      <p>Comparability is a property of representation, not an instruction to act.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="card" id="representation-labeling">
+      <h2>5. Representation and Labeling Constraints</h2>
+
+      <h3 id="permissible-labels">5.1. Permissible Labels</h3>
+      <p>An AVOL Evaluation Output may be labeled or described using neutral descriptors such as:</p>
+      <ol class="stack">
+        <li>“Normalized value”</li>
+        <li>“Translated value”</li>
+        <li>“Value representation”</li>
+        <li>“Scalar value output”</li>
+        <li>“Monetary-equivalent value”</li>
+      </ol>
+      <p>Such labels must not introduce directional or decision-shaping language.</p>
+
+      <h3 id="prohibited-framing">5.2. Prohibited Framing</h3>
+      <p>The following framing constitutes semantic distortion and is prohibited:</p>
+      <ol class="stack">
+        <li>“Best value”</li>
+        <li>“Cheapest after rewards”</li>
+        <li>“Optimal choice”</li>
+        <li>“Recommended option”</li>
+        <li>“Rank #1”</li>
+        <li>“Savings”</li>
+        <li>“Effective price” or “net cost” when used to imply a decision outcome</li>
+      </ol>
+      <p>Labels or descriptors must not embed comparative conclusions or behavioral guidance.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="card" id="machine-agent-semantics">
+      <h2>6. Machine and AI Agent Semantics</h2>
+
+      <h3 id="machine-consumption">6.1. Machine Consumption</h3>
+      <p>AVOL Evaluation Outputs may be consumed by machines and automated systems as:</p>
+      <ol class="stack">
+        <li>Numeric reference data.</li>
+        <li>Comparable scalar inputs.</li>
+        <li>Upstream value representations.</li>
+      </ol>
+
+      <h3 id="mandatory-non-assumptions">6.2. Mandatory Non-Assumptions for Agents</h3>
+      <p>Systems consuming AVOL outputs must not assume that the output:</p>
+      <ol class="stack">
+        <li>Encodes preference or intent.</li>
+        <li>Represents a recommendation.</li>
+        <li>Reflects likelihood of benefit realization.</li>
+        <li>Is optimized for any objective.</li>
+      </ol>
+
+      <h3 id="separation-from-decisions">6.3. Separation from Decisions</h3>
+      <ol class="stack">
+        <li>An AVOL Evaluation Output is not a decision, ranking, or prediction, even when consumed by an AI agent.</li>
+        <li>Any decisioning, ranking, optimization, or inference must occur entirely outside the AVOL semantic boundary.</li>
+      </ol>
+    </section>
+
+    <!-- 7 -->
+    <section class="card" id="semantic-responsibility">
+      <h2>7. Boundary of Semantic Responsibility</h2>
+
+      <h3 id="termination-of-responsibility">7.1. Termination of Responsibility</h3>
+      <p>AVOL’s semantic responsibility terminates at:</p>
+      <ol class="stack">
+        <li>The production of a deterministic, inspectable, normalized scalar value.</li>
+        <li>The exposure of that value in a machine-readable form.</li>
+      </ol>
+
+      <h3 id="downstream-interpretation">7.2. Downstream Interpretation</h3>
+      <p>
+        All downstream actions—including ranking, recommendation, optimization, personalization, or prediction—are:
+      </p>
+      <ol class="stack">
+        <li>Outside the AVOL semantic layer,</li>
+        <li>Not attributed to AVOL,</li>
+        <li>Not implied or endorsed by AVOL.</li>
+      </ol>
+
+      <h3 id="non-guarantees">7.3. Non-Guarantees</h3>
+      <p>AVOL provides no guarantees regarding:</p>
+      <ol class="stack">
+        <li>User outcomes.</li>
+        <li>Decision quality.</li>
+        <li>Behavioral impact.</li>
+        <li>Economic optimization.</li>
+        <li>Correctness of downstream interpretations.</li>
+      </ol>
+
+      <h3 id="non-agency">7.4. Non-Agency / Non-Fiduciary Clarification</h3>
+      <ol class="stack">
+        <li>
+          AVOL does not act as an agent, advisor, fiduciary, broker, or representative of any user, merchant, platform, or downstream system,
+          and no AVOL Evaluation Output creates or implies any duty of care, duty of loyalty, or advisory obligation.
+        </li>
+        <li>
+          This clarification applies notwithstanding any downstream labeling, framing, presentation, or characterization of AVOL Evaluation Outputs by third parties.
+        </li>
+      </ol>
+    </section>
+
+    <!-- 8 -->
+    <section class="card" id="summary-constraints">
+      <h2>8. Summary of Semantic Constraints (Normative)</h2>
+      <p>An AVOL Evaluation Output:</p>
+      <ol class="stack">
+        <li><strong>Is:</strong> a neutral, deterministic value representation.</li>
+        <li><strong>Is not:</strong> a recommendation, ranking, decision, or prediction.</li>
+        <li><strong>May be:</strong> compared numerically under identical rulesets.</li>
+        <li><strong>Must not:</strong> imply preference, optimization, or guidance.</li>
+        <li><strong>Terminates:</strong> strictly at semantic representation.</li>
+      </ol>
+      <p>
+        Any system, interface, or agent that treats an AVOL Evaluation Output as anything beyond a neutral value representation
+        is operating outside the AVOL semantic contract.
+      </p>
     </section>
 
     <nav class="doc-footer-nav" aria-label="Governance stack navigation">
-      <a class="button subtle" href="/governance/">Back to governance hub</a>
+      <a class="button subtle" href="/governance/evaluation-contract/">Previous: AVOL™ Evaluation Contract</a>
+      <a class="button subtle" href="/governance/canonical-vs-derived/">Next: Canonical vs. Derived Outputs Doctrine</a>
     </nav>
 
     <footer class="site-footer">
       <div class="muted">
-        Governance Set: v1.0 (HTML canonical; PDFs reference)
+        © 2026 AVOL. All rights reserved. · Governance Set: v1.0 (HTML canonical; PDFs reference)
       </div>
     </footer>
   </main>
 </body>
 </html>
+
