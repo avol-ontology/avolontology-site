@@ -1,18 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AVOL (Adaptive Value Ontology Layer)</title>
+  <meta name="description" content="AVOL is a neutral, deterministic value-representation infrastructure. Governance documents are provided as canonical HTML with reference PDFs." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
-      <h1>AVOL™</h1>
-      <p class="muted">Adaptive Value Ontology Layer</p>
+      <a class="brand" href="/">AVOL</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="/governance/">Governance</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
-    <p>This site publishes the canonical governance specifications for AVOL™.</p>
-  </main>
+    <section class="hero">
+      <h1>AVOL (Adaptive Value Ontology Layer)</h1>
+      <p class="lede">
+        AVOL is a neutral, deterministic value-representation infrastructure that produces a standardized scalar value
+        under an explicitly declared evaluation context. AVOL does not rank, recommend, personalize, optimize, or infer
+        user intent.
+      </p>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p class="muted">© 2026 AVOL. All rights reserved.</p>
-    </div>
-  </footer>
+    <section class="card">
+      <h2>Governance stack</h2>
+      <p class="muted">
+        The documents below define AVOL’s scope, admissible inputs, output semantics, and boundary of responsibility.
+        Canonical form is the HTML shown on this site. PDFs are provided as reference artifacts.
+      </p>
+
+      <ol class="stack">
+        <li><a href="/governance/canonical-definition/">Canonical Definition &amp; Scope Statement</a></li>
+        <li><a href="/governance/declared-evaluation-context/">Declared Evaluation Context</a></li>
+        <li><a href="/governance/evaluation-contract/">AVOL™ Evaluation Contract</a></li>
+        <li><a href="/governance/output-semantics/">AVOL™ Output Semantics Specification</a></li>
+        <li><a href="/governance/canonical-vs-derived/">Canonical vs. Derived Outputs Doctrine</a></li>
+        <li><a href="/governance/reliance-nonreliance/">Reliance &amp; Non-Reliance Clause (Short-Form)</a></li>
+      </ol>
+
+      <div class="actions">
+        <a class="button" href="/governance/">View governance hub</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Interpretation boundary</h2>
+      <ul class="bullets">
+        <li>AVOL expresses value components that are mechanically associated with an option and quantifiable at evaluation time.</li>
+        <li>Output is representation only; downstream decisioning is external to AVOL.</li>
+        <li>Evaluation context is always supplied explicitly and never inferred.</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <div class="muted">
+        Governance Set: v1.0 (HTML canonical; PDFs reference)
+      </div>
+    </footer>
+  </main>
 </body>
+</html>
