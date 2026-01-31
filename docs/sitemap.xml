@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TEST: CLOUDFlARE GOVERNANCE SITEMAP -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://avolontology.org/TEST-CLOUDFLARE-SITEMAP</loc>
-  </url>
+  <url><loc>https://avolontology.org/</loc></url>
+  <url><loc>https://avolontology.org/governance/</loc></url>
+
+  <url><loc>https://avolontology.org/governance/canonical-definition/</loc></url>
+  <url><loc>https://avolontology.org/governance/declared-evaluation-context/</loc></url>
+  <url><loc>https://avolontology.org/governance/evaluation-contract/</loc></url>
+  <url><loc>https://avolontology.org/governance/output-semantics/</loc></url>
+  <url><loc>https://avolontology.org/governance/canonical-vs-derived/</loc></url>
+  <url><loc>https://avolontology.org/governance/reliance-nonreliance/</loc></url>
+
+  <url><loc>https://avolontology.org/governance/canonical-definition/pdf/</loc></url>
+  <url><loc>https://avolontology.org/governance/declared-evaluation-context/pdf/</loc></url>
+  <url><loc>https://avolontology.org/governance/evaluation-contract/pdf/</loc></url>
+  <url><loc>https://avolontology.org/governance/output-semantics/pdf/</loc></url>
+  <url><loc>https://avolontology.org/governance/canonical-vs-derived/pdf/</loc></url>
+  <url><loc>https://avolontology.org/governance/reliance-nonreliance/pdf/</loc></url>
 </urlset>
