@@ -285,3 +285,19 @@ article.doc section.doc-subsubsection {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+/* =========================================================
+   Document previous / next navigation spacing
+   ========================================================= */
+
+.doc-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem; /* controls space between Previous and Next */
+}
+
+/* Optional: ensure links don't collapse together on narrow screens */
+.doc-nav a {
+  white-space: nowrap;
+}
