@@ -216,3 +216,28 @@ article.doc section.doc-subsubsection {
 .doc-eval-contract .toc__list {
   list-style-type: decimal;
 }
+
+/* Evaluation Contract: align TOC indent with other docs */
+.doc-eval-contract .toc__list {
+  padding-left: 2.75rem;       /* increase as needed */
+  margin-left: 0;              /* prevents extra left shift */
+  list-style-position: outside;
+}
+
+/* Evaluation Contract: numbered TOC with aligned, clickable numbers */
+.doc-eval-contract .toc__list--numbered {
+  list-style: none;            /* remove bullets */
+  padding-left: 2.75rem;       /* matches your other TOCs; adjust if needed */
+  margin-left: 0;
+}
+
+.doc-eval-contract .toc__list--numbered li a {
+  display: grid;
+  grid-template-columns: 3ch auto;  /* aligns 1–14 */
+  column-gap: 0.75rem;
+}
+
+.doc-eval-contract .toc__list--numbered .toc-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
