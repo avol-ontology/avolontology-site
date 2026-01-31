@@ -276,3 +276,12 @@ article.doc section.doc-subsubsection {
 .doc-eval-contract .toc__list--numbered {
   padding-left: 1.5rem;
 }
+
+/* Reliance & Non-Reliance: remove stray divider under PDF link (notice block border) */
+.doc-reliance-nonreliance .canonical-notice,
+.doc-reliance-nonreliance .doc-notice,
+.doc-reliance-nonreliance .notice {
+  border-bottom: none !important;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
