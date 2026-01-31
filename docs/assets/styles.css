@@ -136,3 +136,19 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
 .doc .doc-subsubsection > p {
   margin-bottom: 0.75rem; /* keep readable separation between numbered items */
 }
+
+/* Governance docs: make number-only subsubsections read as a single line item */
+.doc .doc-subsubsection > h4 {
+  display: inline;
+  margin: 0 !important;
+}
+
+.doc .doc-subsubsection > h4 + p {
+  display: inline;
+  margin: 0 !important;
+}
+
+/* Add separation between items (not between number and its text) */
+.doc .doc-subsubsection {
+  margin: 0 0 0.75rem 0 !important;
+}
