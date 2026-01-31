@@ -31,246 +31,205 @@
       </div>
 
       <p class="muted">
-        This document defines the structure, constraints, and boundary conditions of a Declared Evaluation Context within AVOL.
+        Canonical text appears below verbatim.
       </p>
     </section>
 
     <section class="card">
-      <h2>Contents</h2>
-      <ol class="stack">
-        <li><a href="#definition">Definition</a></li>
-        <li><a href="#what-it-is-not">What a Declared Evaluation Context Is Not</a></li>
-        <li><a href="#purpose-and-rationale">Purpose and Rationale</a></li>
-        <li><a href="#canonicality-within-context">Canonicality Within Context</a></li>
-        <li><a href="#structure-and-constraints">Structure and Constraints of a Declared Evaluation Context</a></li>
-        <li><a href="#allowed-contextual-parameters">Allowed Contextual Parameters</a></li>
-        <li><a href="#prohibited-behaviors">Prohibited Behaviors Within Context</a></li>
-        <li><a href="#separation-from-decisioning">Separation From Decisioning</a></li>
-        <li><a href="#relationship-to-avol-base">Relationship to AVOL-Base</a></li>
-        <li><a href="#coexistence-of-multiple-contexts">Coexistence of Multiple Contexts</a></li>
-        <li><a href="#governance-and-enforcement">Governance and Enforcement</a></li>
-        <li><a href="#boundary-statement">Boundary Statement</a></li>
-      </ol>
-    </section>
-
-    <section class="card" id="definition">
-      <h2>Definition</h2>
-      <p>
-        A Declared Evaluation Context is an explicit, rule-bound specification that defines which externally governed
-        parameters are in force when AVOL instantiates a value representation. A Declared Evaluation Context:
-      </p>
-      <ul class="bullets">
-        <li>is supplied explicitly at evaluation time</li>
-        <li>is never inferred, derived, or assumed by the system under any condition</li>
-        <li>is deterministic, inspectable, and finite</li>
-        <li>references externally defined rules or entitlements, not user preferences or intent</li>
-      </ul>
-      <p>
-        A Declared Evaluation Context does not alter AVOL’s ontology, conversion logic, or aggregation rules.
-        It constrains which rule-bound facts are considered operative for a given evaluation.
-      </p>
-    </section>
-
-    <section class="card" id="what-it-is-not">
-      <h2>What a Declared Evaluation Context Is Not</h2>
-      <p>
-        When multiple Declared Evaluation Contexts are valid, selection among them is external to AVOL.
-        AVOL SHALL NOT infer, prioritize, reconcile, or select among contexts, nor combine or adjudicate outputs across contexts.
-        A Declared Evaluation Context is not:
-      </p>
-      <ul class="bullets">
-        <li>Personalization</li>
-        <li>Preference expression</li>
-        <li>Intent signaling</li>
-        <li>Outcome optimization</li>
-        <li>Ranking logic</li>
-        <li>Recommendation logic</li>
-        <li>Adaptive weighting</li>
-        <li>Probabilistic or predictive modeling within the canonical (AVOL-Base) value representation</li>
-      </ul>
-      <p>
-        Context declaration does not express normative importance or evaluative judgment.
-        It declares only which externally governed conditions apply.
-      </p>
-    </section>
-
-    <section class="card" id="purpose-and-rationale">
-      <h2>Purpose and Rationale</h2>
-      <p>
-        Declared Evaluation Context exists to allow AVOL to represent value as it exists under explicitly specified conditions,
-        without inference or steering by the system.
-      </p>
-      <p>
-        Many transactional value components are contingent on rule-governed states (e.g., loyalty tier rules, payment instrument terms,
-        contractual entitlements). If those states are not explicitly declared, a system would be required to assume, guess, or infer which
-        rules apply. AVOL does not perform such inference.
-      </p>
-      <p>
-        Declared Evaluation Context eliminates that ambiguity by requiring all contingent conditions to be explicitly supplied, allowing AVOL
-        to apply externally defined rules deterministically, without interpreting user intent, likelihood of benefit realization, or preference.
-      </p>
-      <p>
-        Absence of a Declared Evaluation Context is not an error condition. In such cases, AVOL evaluates the option under AVOL-Base,
-        the context-free canonical instantiation.
-      </p>
-
-      <p><strong>Declared Evaluation Context provides a formal mechanism to:</strong></p>
-      <ul class="bullets">
-        <li>Resolve rule-dependent value components</li>
-        <li>Preserve determinism and inspectability</li>
-        <li>Avoid implicit personalization or intent inference</li>
-        <li>Maintain AVOL’s neutrality boundary</li>
-      </ul>
-    </section>
-
-    <section class="card" id="canonicality-within-context">
-      <h2>Canonicality Within Context</h2>
-      <p>AVOL guarantees canonical outputs within a Declared Evaluation Context.</p>
-      <p><strong>Canonicality Rule:</strong></p>
-      <p>Identical inputs + identical declared evaluation context → identical outputs</p>
-      <p>Canonicality is preserved per context, not across contexts.</p>
-      <p>
-        Different declared contexts may yield different outputs without violating canonicality, provided that:
-      </p>
-      <ul class="bullets">
-        <li>Each context is explicitly declared</li>
-        <li>Each context is rule-bound and deterministic</li>
-        <li>No context mutates AVOL’s ontology or computation rules</li>
-      </ul>
-      <p>There is no implicit or default context beyond AVOL-Base.</p>
-    </section>
-
-    <section class="card" id="structure-and-constraints">
-      <h2>Structure and Constraints of a Declared Evaluation Context</h2>
-      <p>A valid Declared Evaluation Context must satisfy all of the following:</p>
-
-      <ol class="stack">
-        <li>
-          <strong>1. Explicitness</strong>
-          <ul class="bullets">
-            <li>1.1. All contextual parameters are declared prior to evaluation</li>
-            <li>1.2. No parameter may be optional, inferred, or implied</li>
-          </ul>
-        </li>
-        <li>
-          <strong>2. Rule-Boundedness</strong>
-          <ul class="bullets">
-            <li>2.1. Each parameter references externally defined, inspectable rules</li>
-            <li>2.2. Rules originate outside AVOL (e.g., issuer terms, program definitions, etc.)</li>
-          </ul>
-        </li>
-        <li>
-          <strong>3. Determinism</strong>
-          <ul class="bullets">
-            <li>3.1. Given the same declared context, results are invariant</li>
-            <li>3.2. No stochastic or adaptive behavior is permitted</li>
-          </ul>
-        </li>
-        <li>
-          <strong>4. Immutability During Evaluation</strong>
-          <ul class="bullets">
-            <li>4.1. The declared context is fixed for the duration of an evaluation</li>
-            <li>4.2. Context cannot be modified mid-computation</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <section class="card" id="allowed-contextual-parameters">
-      <h2>Allowed Contextual Parameters</h2>
-      <p>
-        Declared Evaluation Context may include parameters that reference externally governed entitlements or conditions, such as:
-      </p>
-      <ul class="bullets">
-        <li>Loyalty program tier</li>
-        <li>Payment instrument type</li>
-        <li>Contractual eligibility flags</li>
-        <li>Jurisdictional rule applicability</li>
-        <li>Program enrollment status</li>
-        <li>Any other externally defined, rule-governed entitlement or condition whose applicability is explicitly declared and independently inspectable</li>
-      </ul>
-
-      <p><strong>These parameters:</strong></p>
-      <ul class="bullets">
-        <li>Reference what rules apply, not what the user prefers</li>
-        <li>Do not encode subjective value or intent</li>
-        <li>Do not alter AVOL’s conversion logic</li>
-      </ul>
-
-      <p>
-        Contextual parameters that do not meet these criteria are non-permissible within AVOL.
-        Externally governed parameters are defined and maintained outside AVOL and are not authored, selected, curated, or modified by AVOL for evaluative purposes.
-        AVOL does not evaluate likelihood, utility, or desirability of these parameters. It only applies their externally defined rules if declared.
-      </p>
-    </section>
-
-    <section class="card" id="prohibited-behaviors">
-      <h2>Prohibited Behaviors Within Context</h2>
-      <p>Within a Declared Evaluation Context, AVOL must not:</p>
-      <ul class="bullets">
-        <li>Infer user intent or preference</li>
-        <li>Learn or adapt weights over time</li>
-        <li>Rank or order options</li>
-        <li>Recommend or label outcomes as “best”</li>
-        <li>Optimize toward any outcome</li>
-        <li>Incorporate likelihood, probability, forecasting, or expected-value assumptions into the canonical (AVOL-Base) value representation</li>
-        <li>Resolve ambiguity through heuristics</li>
-      </ul>
-      <p>
-        Non-canonical analyses, projections, simulations, or decision systems may operate on AVOL outputs, provided that the canonical value representation remains intact and distinguishable.
-      </p>
-    </section>
-
-    <section class="card" id="separation-from-decisioning">
-      <h2>Separation From Decisioning</h2>
-      <p>Declared Evaluation Context does not perform decisioning. It does not:</p>
-      <ul class="bullets">
-        <li>Compare options</li>
-        <li>Determine superiority or preference</li>
-        <li>Influence ordering or visibility</li>
-        <li>Produce choice guidance</li>
-      </ul>
-      <p>Any interpretation, comparison, ranking, or recommendation occurs strictly downstream of AVOL.</p>
-    </section>
-
-    <section class="card" id="relationship-to-avol-base">
-      <h2>Relationship to AVOL-Base</h2>
-      <p>AVOL-Base is the context-free instantiation of AVOL.</p>
-      <ul class="bullets">
-        <li>AVOL-Base applies when no Declared Evaluation Context is supplied</li>
-        <li>It represents value under baseline, non-contingent rules</li>
-        <li>It is canonical, deterministic, and inspectable</li>
-      </ul>
-      <p>Declared Evaluation Contexts are additive instantiations, not mutations.</p>
-    </section>
-
-    <section class="card" id="coexistence-of-multiple-contexts">
-      <h2>Coexistence of Multiple Contexts</h2>
-      <p>Multiple Declared Evaluation Contexts may be applied to the same option, provided that:</p>
-      <ul class="bullets">
-        <li>Each context is independently declared</li>
-        <li>Each context is evaluated separately</li>
-        <li>Outputs are not combined, weighted, or collapsed within AVOL</li>
-      </ul>
-      <p>AVOL does not reconcile or adjudicate between contexts.</p>
-    </section>
-
-    <section class="card" id="governance-and-enforcement">
-      <h2>Governance and Enforcement</h2>
-      <p>
-        Declared Evaluation Context is a first-class, governed construct within AVOL.
-        Any context that is inferred, adaptive, preference-encoding, or that alters AVOL’s ontology or computation rules is non-compliant with AVOL’s canonical posture.
-      </p>
-    </section>
-
-    <section class="card" id="boundary-statement">
-      <h2>Boundary Statement</h2>
-      <p>
-        Declared Evaluation Context allows AVOL to support contextualized value evaluation without becoming a personalization, ranking, or decision system.
-      </p>
-      <p>
-        AVOL’s responsibility ends at representation. Context does not extend that responsibility.
-      </p>
+      <h2>Canonical text</h2>
+      <pre class="doc-pre">AVOL™ - DECLARED EVALUATION CONTEXT 
+Version 1.0 │ Effective Date: 09-January-2026 
+Page 1 of  5 
+ 
+Definition 
+A Declared Evaluation Context is an explicit, rule-bound specification that defines which 
+externally governed parameters are in force when AVOL instantiates a value representation.  A 
+Declared Evaluation Context: 
+• is supplied explicitly at evaluation time 
+• is never inferred, derived, or assumed by the system under any condition 
+• is deterministic, inspectable, and finite 
+• references externally defined rules or entitlements, not user preferences or intent 
+ 
+A Declared Evaluation Context does not alter AVOL’s ontology, conversion logic, or aggregation 
+rules.  It constrains which rule-bound facts are considered operative for a given evaluation. 
+ 
+What a Declared Evaluation Context Is Not 
+When multiple Declared Evaluation Contexts are valid, selection among them is external to 
+AVOL. AVOL SHALL NOT infer, prioritize, reconcile, or select among contexts, nor combine or 
+adjudicate outputs across contexts.  A Declared Evaluation Context is not: 
+• Personalization 
+• Preference expression 
+• Intent signaling 
+• Outcome optimization 
+• Ranking logic 
+• Recommendation logic 
+• Adaptive weighting 
+• Probabilistic or predictive modeling within the canonical (AVOL-Base) value 
+representation 
+ 
+Context declaration does not express normative importance or evaluative judgment.  It declares 
+only which externally governed conditions apply. 
+ 
+Purpose and Rationale 
+Declared Evaluation Context exists to allow AVOL to represent value as it exists under explicitly 
+specified conditions, without inference or steering by the system. 
+ 
+Many transactional value components are contingent on rule-governed states (e.g., 
+loyalty tier rules, payment instrument terms, contractual entitlements). If those states are not 
+explicitly declared, a system would be required to assume, guess, or infer which rules apply. 
+AVOL does not perform such inference. 
+ 
+Declared Evaluation Context eliminates that ambiguity by requiring all contingent conditions to be 
+explicitly supplied, allowing AVOL to apply externally defined rules deterministically, without 
+interpreting user intent, likelihood of benefit realization, or preference. 
+ 
+Absence of a Declared Evaluation Context is not an error condition. In such cases, AVOL 
+evaluates the option under AVOL-Base, the context-free canonical instantiation. 
+ 
+Declared Evaluation Context provides a formal mechanism to: 
+• Resolve rule-dependent value components 
+• Preserve determinism and inspectability 
+• Avoid implicit personalization or intent inference 
+• Maintain AVOL’s neutrality boundary 
+ 
+AVOL™ - DECLARED EVALUATION CONTEXT 
+Version 1.0 │ Effective Date: 09-January-2026 
+Page 2 of  5 
+ 
+Canonicality Within Context 
+AVOL guarantees canonical outputs within a Declared Evaluation Context. 
+ 
+Canonicality Rule: 
+Identical inputs + identical declared evaluation context → identical outputs 
+ 
+Canonicality is preserved per context, not across contexts. 
+ 
+Different declared contexts may yield different outputs without violating canonicality, provided 
+that: 
+• Each context is explicitly declared 
+• Each context is rule-bound and deterministic 
+• No context mutates AVOL’s ontology or computation rules 
+ 
+There is no implicit or default context beyond AVOL-Base. 
+ 
+Structure and Constraints of a Declared Evaluation Context 
+A valid Declared Evaluation Context must satisfy all of the following: 
+ 
+1. Explicitness 
+1.1. All contextual parameters are declared prior to evaluation 
+1.2. No parameter may be optional, inferred, or implied 
+ 
+2. Rule-Boundedness 
+2.1. Each parameter references externally defined, inspectable rules 
+2.2. Rules originate outside AVOL (e.g., issuer terms, program definitions, etc.) 
+ 
+3. Determinism 
+3.1. Given the same declared context, results are invariant 
+3.2. No stochastic or adaptive behavior is permitted 
+ 
+4. Immutability During Evaluation 
+4.1. The declared context is fixed for the duration of an evaluation 
+4.2. Context cannot be modified mid-computation 
+ 
+Allowed Contextual Parameters 
+Declared Evaluation Context may include parameters that reference externally governed 
+entitlements or conditions, such as: 
+• Loyalty program tier 
+• Payment instrument type 
+• Contractual eligibility flags 
+• Jurisdictional rule applicability 
+• Program enrollment status 
+• Any other externally defined, rule-governed entitlement or condition whose applicability is 
+explicitly declared and independently inspectable 
+ 
+These parameters: 
+• Reference what rules apply, not what the user prefers 
+• Do not encode subjective value or intent 
+• Do not alter AVOL’s conversion logic 
+ 
+Contextual parameters that do not meet these criteria are non-permissible within AVOL. Externally governed parameters are defined and maintained outside AVOL and are not authored, selected, curated, or modified by AVOL for evaluative purposes. 
+AVOL does not evaluate likelihood, utility, or desirability of these parameters. It only applies their externally defined rules if declared. 
+ 
+AVOL™ - DECLARED EVALUATION CONTEXT 
+Version 1.0 │ Effective Date: 09-January-2026 
+Page 3 of  5 
+ 
+Prohibited Behaviors Within Context 
+Within a Declared Evaluation Context, AVOL must not: 
+• Infer user intent or preference 
+• Learn or adapt weights over time 
+• Rank or order options 
+• Recommend or label outcomes as “best” 
+• Optimize toward any outcome 
+• Incorporate likelihood, probability, forecasting, or expected-value assumptions into the 
+canonical (AVOL-Base) value representation 
+• Resolve ambiguity through heuristics 
+ 
+Any such behavior constitutes decisioning and is explicitly outside AVOL’s scope. 
+ 
+Non-canonical analyses, projections, simulations, or decision systems may operate on AVOL 
+outputs, provided that the canonical value representation remains intact and distinguishable. 
+ 
+Separation From Decisioning 
+Declared Evaluation Context does not perform decisioning. It does not: 
+• Compare options 
+• Determine superiority or preference 
+• Influence ordering or visibility 
+• Produce choice guidance 
+ 
+Any interpretation, comparison, ranking, or recommendation occurs strictly downstream of 
+AVOL. 
+ 
+Relationship to AVOL-Base 
+AVOL-Base is the context-free instantiation of AVOL. 
+• AVOL-Base applies when no Declared Evaluation Context is supplied 
+• It represents value under baseline, non-contingent rules 
+• It is canonical, deterministic, and inspectable 
+ 
+Declared Evaluation Contexts are additive instantiations, not mutations: 
+• They do not override AVOL-Base 
+• They do not rewrite AVOL’s ontology 
+• They do not alter conversion or aggregation rules 
+Multiple contexts may coexist, each producing its own canonical output. 
+ 
+It produces context-instantiated value representations only. 
+ 
+AVOL™ - DECLARED EVALUATION CONTEXT 
+Version 1.0 │ Effective Date: 09-January-2026 
+Page 4 of  5 
+ 
+Coexistence of Multiple Contexts 
+Multiple Declared Evaluation Contexts may be applied to the same option without contaminating 
+neutrality, provided that: 
+• Each context is independently declared 
+• Each context is evaluated separately 
+• Outputs are not combined, weighted, or collapsed within AVOL 
+ 
+AVOL does not reconcile or adjudicate between contexts.  It represents value as instantiated 
+under each declared context, nothing more. 
+ 
+Governance and Enforcement 
+Declared Evaluation Context is a first-class, governed construct within AVOL.  Compliance is 
+enforced through versioned specifications and formal review of any changes affecting context 
+structure or admissibility.  Any context that: 
+• Is inferred rather than declared 
+• Introduces adaptive or heuristic behavior 
+• Encodes preference, intent, or optimization 
+• Mutates AVOL’s ontology or computation rules 
+is non-compliant with AVOL’s canonical posture. 
+ 
+AVOL™ - DECLARED EVALUATION CONTEXT 
+Version 1.0 │ Effective Date: 09-January-2026 
+Page 5 of  5 
+ 
+Boundary Statement 
+Declared Evaluation Context allows AVOL to support contextualized value evaluation without 
+becoming a personalization, ranking, or decision system. 
+AVOL’s responsibility ends at representation. 
+ 
+Context does not extend that responsibility. 
+ 
+© 2026 AVOL. All rights reserved.</pre>
     </section>
 
     <nav class="doc-footer-nav" aria-label="Governance stack navigation">
@@ -286,6 +245,5 @@
   </main>
 </body>
 </html>
-
 
 
