@@ -2,230 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Canonical Definition &amp; Scope Statement — AVOL Governance</title>
-  <meta name="description" content="AVOL™ Canonical Definition & Scope Statement v1.0. Canonical HTML; PDFs are reference artifacts." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AVOL™ — Canonical Definition &amp; Scope Statement</title>
   <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="robots" content="index,follow" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/">AVOL</a>
-      <nav class="top-nav" aria-label="Primary">
-        <a href="/governance/">Governance</a>
-      </nav>
+      <div class="site-header__inner">
+        <a class="site-brand" href="/">AVOL™</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/governance/">Governance</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="doc-header">
-      <h1>AVOL™ — Canonical Definition &amp; Scope Statement</h1>
+    <article class="doc">
+      <header class="doc-header">
+        <p class="doc-breadcrumb">
+          <a href="/governance/">Governance</a>
+          <span aria-hidden="true">/</span>
+          <span>Canonical Definition &amp; Scope Statement</span>
+        </p>
 
-      <div class="notice" role="note" aria-label="Canonical notice">
-        <div><strong>Status:</strong> Normative</div>
-        <div><strong>Version:</strong> 1.0</div>
-        <div><strong>Effective date:</strong> 09-January-2026</div>
-        <div><strong>Canonical:</strong> This HTML page is the authoritative form of this document.</div>
-        <div><strong>PDF:</strong> <a href="/governance/canonical-definition/pdf/">Reference artifacts</a></div>
-        <div><strong>Governance stack:</strong> <a href="/governance/">/governance/</a></div>
-      </div>
+        <h1 class="doc-title">Canonical Definition &amp; Scope Statement</h1>
 
-      <p class="muted">
-        This page is intended to be read as a definitional reference, not a product description or behavioral specification.
-      </p>
-    </section>
+        <section class="canonical-notice" aria-label="Canonical notice">
+          <div class="canonical-notice__grid">
+            <div class="canonical-notice__item">
+              <div class="canonical-notice__label">Status</div>
+              <div class="canonical-notice__value">Normative</div>
+            </div>
+            <div class="canonical-notice__item">
+              <div class="canonical-notice__label">Version</div>
+              <div class="canonical-notice__value">1.0</div>
+            </div>
+            <div class="canonical-notice__item">
+              <div class="canonical-notice__label">Effective date</div>
+              <div class="canonical-notice__value">09-January-2026</div>
+            </div>
+            <div class="canonical-notice__item canonical-notice__item--wide">
+              <div class="canonical-notice__label">Canonical statement</div>
+              <div class="canonical-notice__value">
+                The HTML content on avolontology.org is authoritative. PDFs are non-authoritative reference artifacts.
+              </div>
+            </div>
+            <div class="canonical-notice__item">
+              <div class="canonical-notice__label">PDF (reference)</div>
+              <div class="canonical-notice__value">
+                <a href="/governance/canonical-definition/pdf/">View PDF reference page</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <section class="card">
-      <h2>Contents</h2>
-      <ol class="stack">
-        <li><a href="#canonical-notice">Canonical notice</a></li>
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#problem-space">The problem space</a></li>
-        <li><a href="#what-avol-does">What AVOL does</a></li>
-        <li><a href="#what-avol-does-not-do">What AVOL does not do</a></li>
-        <li><a href="#neutrality-and-invariance">Neutrality and invariance</a></li>
-        <li><a href="#relevance-in-automated-evaluation">Relevance in automated and agent-mediated evaluation</a></li>
-        <li><a href="#governance-posture">Governance posture</a></li>
-        <li><a href="#independence">Independence</a></li>
-        <li><a href="#scope-boundary">Scope boundary</a></li>
-      </ol>
-    </section>
+        <nav class="toc" aria-label="Contents">
+          <h2 class="toc__title">Contents</h2>
+          <ol class="toc__list">
+            <li><a href="#canonical-notice">Canonical Notice</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#the-problem-space">The Problem Space</a></li>
+            <li><a href="#what-avol-does">What AVOL Does</a></li>
+            <li><a href="#what-avol-does-not-do">What AVOL Does Not Do</a></li>
+            <li><a href="#neutrality-and-invariance">Neutrality and Invariance</a></li>
+            <li><a href="#relevance-in-automated-and-agent-mediated-evaluation">Relevance in Automated and Agent-Mediated Evaluation</a></li>
+            <li><a href="#governance-posture">Governance Posture</a></li>
+            <li><a href="#independence">Independence</a></li>
+            <li><a href="#scope-boundary">Scope Boundary</a></li>
+          </ol>
+        </nav>
+      </header>
 
-    <section class="card" id="canonical-notice">
-      <h2>Canonical notice</h2>
-      <p>
-        This document defines the authoritative scope, role, and boundaries of the Adaptive Value Ontology Layer (AVOL).
-        AVOL is a value representation system only. It expresses quantifiable components of value associated with an option
-        in a standardized, inspectable form and does not perform decisioning, ranking, optimization, or preference encoding.
-        Any interpretation, comparison, or action taken in response to AVOL outputs occurs outside the AVOL boundary and is
-        the responsibility of the consuming system. This page is intended to be read as a definitional reference, not a
-        product description or behavioral specification.
-      </p>
-    </section>
+      <section class="doc-section" id="canonical-notice">
+        <h2>Canonical Notice</h2>
+        <p>This document defines the authoritative scope, role, and boundaries of the Adaptive Value Ontology Layer (AVOL). AVOL is a value representation system only. It expresses quantifiable components of value associated with an option in a standardized, inspectable form and does not perform decisioning, ranking, optimization, or preference encoding. Any interpretation, comparison, or action taken in response to AVOL outputs occurs outside the AVOL boundary and is the responsibility of the consuming system. This page is intended to be read as a definitional reference, not a product description or behavioral specification.</p>
+      </section>
 
-    <section class="card" id="purpose">
-      <h2>Purpose</h2>
-      <p>
-        AVOL is a neutral value representation system. Its sole function is to express quantifiable components of value
-        that already exist within an option, in a common and inspectable form suitable for evaluation.
-      </p>
-      <p>
-        AVOL is not a product surface, a decision system, or a marketplace. It does not attempt to influence outcomes.
-      </p>
-    </section>
+      <section class="doc-section" id="purpose">
+        <h2>Purpose</h2>
+        <p>AVOL is a neutral value representation system. Its sole function is to express quantifiable components of value that already exist within an option, in a common and inspectable form suitable for evaluation.</p>
+        <p>AVOL is not a product surface, a decision system, or a marketplace.</p>
+        <p>It does not attempt to influence outcomes.</p>
+      </section>
 
-    <section class="card" id="problem-space">
-      <h2>The problem space</h2>
-      <p>
-        Across many transactional domains, value exists beyond listed price. That value is:
-      </p>
-      <ul class="bullets">
-        <li><strong>Real</strong> — it affects economic outcomes.</li>
-        <li><strong>Quantifiable</strong> — it can be expressed numerically using observable references.</li>
-        <li><strong>Fragmented</strong> — it is expressed in incompatible units (currency, points, credits, entitlements).</li>
-        <li><strong>Inconsistently presented</strong> — often deferred, conditional, or opaque at the moment of evaluation.</li>
-      </ul>
-      <p>
-        As a result, only price appears as a single, comparable figure, while other value components remain unresolved.
-      </p>
-    </section>
+      <section class="doc-section" id="the-problem-space">
+        <h2>The Problem Space</h2>
+        <p>Across many transactional domains, value exists beyond listed price. That value is:</p>
+        <ul>
+          <li>Real – it affects economic outcomes.</li>
+          <li>Quantifiable – it can be expressed numerically using observable references.</li>
+          <li>Fragmented – it is expressed in incompatible units (currency, points, credits, entitlements).</li>
+          <li>Inconsistently presented – often deferred, conditional, or opaque at the moment of evaluation.</li>
+        </ul>
+        <p>As a result, only price appears as a single, comparable figure, while other value components remain unresolved.</p>
+      </section>
 
-    <section class="card" id="what-avol-does">
-      <h2>What AVOL does</h2>
-      <p>
-        AVOL translates heterogeneous, quantifiable value components associated with an option into a common representation.
-        Specifically, AVOL:
-      </p>
-      <ul class="bullets">
-        <li>
-          Identifies value components that are mechanically associated with an option (i.e. deterministically linked by
-          published rules or entitlements, without inference or subjective judgment) and knowable at evaluation.
-        </li>
-        <li>
-          Converts those components into standardized monetary equivalents using declared, deterministic rules.
-        </li>
-        <li>
-          Aggregates the converted components arithmetically into a single, comparable representation.
-        </li>
-        <li>
-          Selection of admissible component types, conversion methodologies, and aggregation formulas constitutes ontology
-          and measurement specification, not option selection, ranking, optimization, or preference expression.
-        </li>
-      </ul>
-      <p>
-        The output expresses what is present under a declared evaluation context, not what is preferred or inferred.
-      </p>
-    </section>
+      <section class="doc-section" id="what-avol-does">
+        <h2>What AVOL Does</h2>
+        <p>AVOL translates heterogeneous, quantifiable value components associated with an option into a common representation. Specifically, AVOL:</p>
+        <ul>
+          <li>Identifies value components that are mechanically associated with an option (i.e. deterministically linked by published rules or entitlements, without inference or subjective judgment) and knowable at evaluation.</li>
+          <li>Converts those components into standardized monetary equivalents using declared, deterministic rules.</li>
+          <li>Aggregates the converted components arithmetically into a single, comparable representation.</li>
+          <li>Selection of admissible component types, conversion methodologies, and aggregation formulas constitutes ontology and measurement specification, not option selection, ranking, optimization, or preference expression.</li>
+        </ul>
+        <p>The output expresses what is present under a declared evaluation context, not what is preferred or inferred.</p>
+      </section>
 
-    <section class="card" id="what-avol-does-not-do">
-      <h2>What AVOL does not do</h2>
-      <p>AVOL explicitly does not:</p>
-      <ul class="bullets">
-        <li>Rank options</li>
-        <li>Recommend choices</li>
-        <li>Optimize outcomes</li>
-        <li>Steer behavior</li>
-        <li>Infer intent</li>
-        <li>Encode preferences or value judgments within the computation</li>
-        <li>Infer or adapt outputs based on undeclared user preferences</li>
-        <li>Incorporate platform incentives, commercial priorities, or selection likelihood</li>
-      </ul>
-      <p>
-        AVOL performs no decisioning.
-      </p>
-      <p>
-        AVOL’s suitability for consumption by automated systems does not alter the canonical boundary or expand AVOL’s
-        responsibility for downstream decisioning. All interpretation and action occur downstream, outside the AVOL boundary.
-      </p>
-    </section>
+      <section class="doc-section" id="what-avol-does-not-do">
+        <h2>What AVOL Does Not Do</h2>
+        <p>AVOL explicitly does not:</p>
+        <ul>
+          <li>Rank options</li>
+          <li>Recommend choices</li>
+          <li>Optimize outcomes</li>
+          <li>Steer behavior</li>
+          <li>Infer intent</li>
+          <li>Encode preferences or value judgments within the computation</li>
+          <li>Infer or adapt outputs based on undeclared user preferences</li>
+          <li>Incorporate platform incentives, commercial priorities, or selection likelihood</li>
+        </ul>
+        <p>AVOL performs no decisioning.</p>
+        <p>AVOL’s suitability for consumption by automated systems does not alter the canonical boundary or expand AVOL’s responsibility for downstream decisioning. All interpretation and action occur downstream, outside the AVOL boundary.</p>
+      </section>
 
-    <section class="card" id="neutrality-and-invariance">
-      <h2>Neutrality and invariance</h2>
-      <p>AVOL is designed as a neutral reference layer. Its outputs are:</p>
-      <ul class="bullets">
-        <li>
-          <strong>Invariant within a declared evaluation context</strong> — identical inputs under the same declared context
-          produce identical outputs.
-        </li>
-        <li>
-          <strong>Context-explicit</strong> — evaluation context, where applied, is declared, rule-bound, and inspectable rather
-          than inferred or personalized.
-        </li>
-        <li>
-          <strong>Inspectable</strong> — every output decomposes into explicit arithmetic using declared constants and rules.
-        </li>
-        <li>
-          <strong>Comparable by construction</strong> — comparability is a property of the representation, not a ranking action.
-        </li>
-      </ul>
-      <p>
-        AVOL does not infer user preferences, predict outcomes, or optimize for selection likelihood; it computes value strictly
-        according to declared rules within the evaluation context in effect.
-      </p>
-      <p>
-        Neutrality is structural, not aspirational.
-      </p>
-    </section>
+      <section class="doc-section" id="neutrality-and-invariance">
+        <h2>Neutrality and Invariance</h2>
+        <p>AVOL is designed as a neutral reference layer. Its outputs are:</p>
+        <ul>
+          <li>Invariant within a declared evaluation context — identical inputs under the same declared context produce identical outputs.</li>
+          <li>Context-explicit — evaluation context, where applied, is declared, rule-bound, and inspectable rather than inferred or personalized.</li>
+          <li>Inspectable — every output decomposes into explicit arithmetic using declared constants and rules.</li>
+          <li>Comparable by construction — comparability is a property of the representation, not a ranking action.</li>
+        </ul>
+        <p>AVOL does not infer user preferences, predict outcomes, or optimize for selection likelihood; it computes value strictly according to declared rules within the evaluation context in effect.</p>
+        <p>Neutrality is structural, not aspirational.</p>
+      </section>
 
-    <section class="card" id="relevance-in-automated-evaluation">
-      <h2>Relevance in automated and agent-mediated evaluation</h2>
-      <p>
-        As evaluation increasingly occurs through automated systems and AI agents, representational neutrality becomes mandatory
-        rather than optional. Any system that combines value computation with preference, ranking, or incentive exposure inherits
-        behavioral responsibility.
-      </p>
-      <p>
-        AVOL separates these concerns by terminating at representation. It provides a machine-readable value signal without
-        embedding judgment.
-      </p>
-    </section>
+      <section class="doc-section" id="relevance-in-automated-and-agent-mediated-evaluation">
+        <h2>Relevance in Automated and Agent-Mediated Evaluation</h2>
+        <p>As evaluation increasingly occurs through automated systems and AI agents, representational neutrality becomes mandatory rather than optional. Any system that combines value computation with preference, ranking, or incentive exposure inherits behavioral responsibility.</p>
+        <p>AVOL separates these concerns by terminating at representation.</p>
+        <p>It provides a machine-readable value signal without embedding judgment.</p>
+      </section>
 
-    <section class="card" id="governance-posture">
-      <h2>Governance posture</h2>
-      <p>
-        AVOL is an ontology and a representational contract. It does not set standards for behavior, outcomes, or decisions.
-        It defines the minimal, sufficient structure required to express quantifiable value consistently and neutrally.
-        AVOL is designed to terminate at representation regardless of foreseeable downstream use.
-      </p>
-      <p>
-        The domain avolontology.org serves as the canonical reference surface for:
-      </p>
-      <ul class="bullets">
-        <li>The AVOL ontology definition</li>
-        <li>The published evaluation contract</li>
-        <li>Versioned constants and rulesets</li>
-        <li>Audit and replication artifacts (as published)</li>
-      </ul>
-    </section>
+      <section class="doc-section" id="governance-posture">
+        <h2>Governance Posture</h2>
+        <p>AVOL is an ontology and a representational contract. It does not set standards for behavior, outcomes, or decisions. It defines the minimal, sufficient structure required to express quantifiable value consistently and neutrally. AVOL is designed to terminate at representation regardless of foreseeable downstream use.</p>
+        <p>The domain avolontology.org serves as the canonical reference surface for:</p>
+        <ul>
+          <li>The AVOL ontology definition</li>
+          <li>The published evaluation contract</li>
+          <li>Versioned constants and rulesets</li>
+          <li>Audit and replication artifacts (as published)</li>
+        </ul>
+      </section>
 
-    <section class="card" id="independence">
-      <h2>Independence</h2>
-      <p>
-        AVOL is legally, financially, and operationally independent. Implementations may license AVOL as a reference layer,
-        but no host system controls AVOL’s computation, rules, or outputs.
-      </p>
-      <p>
-        AVOL’s responsibility ends where representation ends.
-      </p>
-    </section>
+      <section class="doc-section" id="independence">
+        <h2>Independence</h2>
+        <p>AVOL is legally, financially, and operationally independent. Implementations may license AVOL as a reference layer, but no host system controls AVOL’s computation, rules, or outputs.</p>
+        <p>AVOL’s responsibility ends where representation ends.</p>
+      </section>
 
-    <section class="card" id="scope-boundary">
-      <h2>Scope boundary</h2>
-      <p>If a behavior influences choice, it is not AVOL.</p>
-      <p>If a system decides, ranks, optimizes, or persuades, that behavior occurs downstream.</p>
-      <p>AVOL exists to make value legible — not to act on it.</p>
-    </section>
+      <section class="doc-section" id="scope-boundary">
+        <h2>Scope Boundary</h2>
+        <p>If a behavior influences choice, it is not AVOL.</p>
+        <p>If a system decides, ranks, optimizes, or persuades, that behavior occurs downstream.</p>
+        <p>AVOL exists to make value legible – not to act on it.</p>
+      </section>
 
-    <nav class="doc-footer-nav" aria-label="Governance stack navigation">
-      <a class="button subtle" href="/governance/">Back to governance hub</a>
-      <a class="button subtle" href="/governance/declared-evaluation-context/">Next: Declared Evaluation Context</a>
-    </nav>
-
-    <footer class="site-footer">
-      <div class="muted">
-        © 2026 AVOL. All rights reserved. · Governance Set: v1.0 (HTML canonical; PDFs reference)
-      </div>
-    </footer>
+      <nav class="doc-nav" aria-label="Document navigation">
+        <div class="doc-nav__inner">
+          <a class="doc-nav__prev" href="/governance/">← Governance hub</a>
+          <a class="doc-nav__next" href="/governance/declared-evaluation-context/">Next: Declared Evaluation Context →</a>
+        </div>
+      </nav>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <p>Governance Set: v1.0 (HTML canonical; PDFs reference)</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
