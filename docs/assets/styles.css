@@ -271,3 +271,8 @@ article.doc section.doc-subsubsection {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
+/* Evaluation Contract: slightly tighter TOC indentation */
+.doc-eval-contract .toc__list--numbered {
+  padding-left: 1.25rem;
+}
