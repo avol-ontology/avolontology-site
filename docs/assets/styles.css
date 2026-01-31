@@ -118,4 +118,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
   margin-top: 0;
 }
 
+/* Governance docs: remove vertical spacing introduced by numbered subsubsection wrappers */
+.doc .doc-subsubsection {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
