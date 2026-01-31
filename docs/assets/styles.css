@@ -301,3 +301,14 @@ article.doc section.doc-subsubsection {
 .doc-nav a {
   white-space: nowrap;
 }
+
+/* =========================================================
+   Document footer navigation spacing (Previous / Next)
+   ========================================================= */
+
+.doc-nav__inner {
+  display: flex;              /* already true, but safe */
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;                  /* <-- controls space between links */
+}
