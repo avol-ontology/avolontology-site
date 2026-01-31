@@ -318,3 +318,9 @@ article.doc section.doc-subsubsection {
   padding-top: 1.5rem;
   border-top: 1px solid var(--rule);
 }
+
+/* Normalize numbered subsection labels (e.g., 8.1, 7.2, 9.4) */
+.doc-subsection > p > strong {
+  font-size: 1.17em;   /* ≈ 18.7px when base is 16px */
+  font-weight: 700;
+}
