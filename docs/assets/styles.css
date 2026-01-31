@@ -274,5 +274,5 @@ article.doc section.doc-subsubsection {
 
 /* Evaluation Contract: slightly tighter TOC indentation */
 .doc-eval-contract .toc__list--numbered {
-  padding-left: 1.25rem;
+  padding-left: 1.3rem;
 }
