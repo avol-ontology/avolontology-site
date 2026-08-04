@@ -1,0 +1,20 @@
+# AVOL (Adaptive Value Ontology Layer)
+
+> AVOL is a neutral, inspectable value representation layer that converts already-present, quantifiable, non-price components of an option into a standardized monetary-equivalent representation under a declared evaluation context.
+
+AVOL performs deterministic conversion and aggregation only. It does not rank options, recommend choices, optimize outcomes, infer preferences, or predict behavior. The canonical governance documents are the HTML pages linked below; PDF copies are reference artifacts and are not authoritative. Read the governance documents in the listed order.
+
+## Overview
+
+- [About AVOL](https://avolontology.org/): Definition, purpose, scope boundaries, and stewardship information.
+- [Governance](https://avolontology.org/governance/): Index and prescribed reading order for the canonical governance stack.
+- [ValueLens](https://avolontology.org/valuelens/): Explanation of the ValueLens figure, its inputs, and what it does not do.
+
+## Canonical governance
+
+- [Canonical Definition & Scope Statement](https://avolontology.org/governance/canonical-definition/): Defines what AVOL is and is not and establishes its scope boundaries.
+- [Declared Evaluation Context](https://avolontology.org/governance/declared-evaluation-context/): Defines the explicit context input required for an evaluation.
+- [AVOL Evaluation Contract](https://avolontology.org/governance/evaluation-contract/): Specifies valid evaluations, guarantees, prohibitions, and the boundary of AVOL responsibility.
+- [AVOL Output Semantics Specification](https://avolontology.org/governance/output-semantics/): Defines the meaning of AVOL outputs and admissible interpretations.
+- [Canonical vs. Derived Outputs Doctrine](https://avolontology.org/governance/canonical-vs-derived/): Distinguishes canonical AVOL outputs from downstream derived representations.
+- [Reliance & Non-Reliance Clause (Short-Form)](https://avolontology.org/governance/reliance-nonreliance/): Defines the permitted reliance posture for third parties and integrators.
