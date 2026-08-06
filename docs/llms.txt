@@ -2,7 +2,7 @@
 
 > AVOL is a neutral, inspectable value representation layer that converts already-present, quantifiable, non-price components of an option into a standardized monetary-equivalent representation under a declared evaluation context.
 
-AVOL performs deterministic conversion and aggregation only. It does not rank options, recommend choices, optimize outcomes, infer preferences, or predict behavior. The canonical governance documents are the HTML pages linked below; PDF copies are reference artifacts and are not authoritative. Read the governance documents in the listed order.
+AVOL performs deterministic conversion and aggregation only. It does not rank options, recommend choices, optimize outcomes, infer preferences, or predict behavior. The canonical governance documents are the HTML pages linked below; PDF copies are reference artifacts and are not authoritative. Read the governance documents in the listed order. Governance set: v1.0.
 
 ## Overview
 
@@ -18,3 +18,14 @@ AVOL performs deterministic conversion and aggregation only. It does not rank op
 - [AVOL Output Semantics Specification](https://avolontology.org/governance/output-semantics/): Defines the meaning of AVOL outputs and admissible interpretations.
 - [Canonical vs. Derived Outputs Doctrine](https://avolontology.org/governance/canonical-vs-derived/): Distinguishes canonical AVOL outputs from downstream derived representations.
 - [Reliance & Non-Reliance Clause (Short-Form)](https://avolontology.org/governance/reliance-nonreliance/): Defines the permitted reliance posture for third parties and integrators.
+
+## Optional
+
+Download pages for the PDF reference artifacts. Each restates a canonical document above and does not supersede it, so these can be skipped when a shorter context is needed.
+
+- [Canonical Definition & Scope Statement (PDF)](https://avolontology.org/governance/canonical-definition/pdf/): Download page for the PDF copy.
+- [Declared Evaluation Context (PDF)](https://avolontology.org/governance/declared-evaluation-context/pdf/): Download page for the PDF copy.
+- [AVOL Evaluation Contract (PDF)](https://avolontology.org/governance/evaluation-contract/pdf/): Download page for the PDF copy.
+- [AVOL Output Semantics Specification (PDF)](https://avolontology.org/governance/output-semantics/pdf/): Download page for the PDF copy.
+- [Canonical vs. Derived Outputs Doctrine (PDF)](https://avolontology.org/governance/canonical-vs-derived/pdf/): Download page for the PDF copy.
+- [Reliance & Non-Reliance Clause (Short-Form) (PDF)](https://avolontology.org/governance/reliance-nonreliance/pdf/): Download page for the PDF copy.
